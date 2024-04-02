@@ -62,7 +62,6 @@ void PathTrackerNode::robotOdomCallback(const nav_msgs::Odometry::ConstPtr& odom
   this->world_frame_ = odom->header.frame_id;
   this->robot_frame_ = odom->child_frame_id;
   this->odom_world_robot_ = *odom.get();
-
   return;
 };
 
@@ -111,8 +110,8 @@ geometry_msgs::Twist PathTrackerNode::computeControlOutputs(const nav_msgs::Odom
   cmd_vel.linear.x = this->pid_.calculate(SPEED_TARGET, velocity);
   cmd_vel.angular.z = computeStanelyControl(heading_error, lat_error, velocity);
 
-  // std::cout << "robot velocity is " << velocity << " throttle is " << cmd_vel.linear.x << std::endl;
-  // std::cout << "lateral error is " << lat_error << " heading_error is " << heading_error << " steering is " << cmd_vel.angular.z << std::endl;
+//   std::cout << "robot velocity is " << velocity << " throttle is " << cmd_vel.linear.x << std::endl;
+//   std::cout << "lateral error is " << lat_error << " heading_error is " << heading_error << " steering is " << cmd_vel.angular.z << std::endl;
 
   return cmd_vel;
 }
