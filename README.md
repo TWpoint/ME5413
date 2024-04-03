@@ -7,7 +7,6 @@ NUS ME5413 Autonomous Mobile Robotics Planning Project
 ![ROS Noetic](https://img.shields.io/badge/Tools-ROS_Noetic-informational?style=flat&logo=ROS&logoColor=white&color=2bbc8a)
 ![C++](https://img.shields.io/badge/Code-C++-informational?style=flat&logo=c%2B%2B&logoColor=white&color=2bbc8a)
 ![Python](https://img.shields.io/badge/Code-Python-informational?style=flat&logo=Python&logoColor=white&color=2bbc8a)
-![mpc_ros](https://github.com/Geonhee-LEE/mpc_ros)
 ![GitHub Repo stars](https://img.shields.io/github/stars/NUS-Advanced-Robotics-Centre/ME5413_Planning_Project?color=FFE333)
 ![GitHub Repo forks](https://img.shields.io/github/forks/NUS-Advanced-Robotics-Centre/ME5413_Planning_Project?color=FFE333)
 
@@ -39,7 +38,7 @@ NUS ME5413 Autonomous Mobile Robotics Planning Project
   * `velodyne_simulator`
   * `dynamic_reconfigure`
 * Add on ros pkg:
-  * mpc_ros by Geonhee-LEE
+  * mpc_ros by Geonhee-LEE (https://github.com/Geonhee-LEE/mpc_ros)
 
 ## Installation
 
@@ -47,6 +46,7 @@ This repo is a ros workspace, containing three rospkgs:
 
 * `me5413_world` the main pkg containing the gazebo world, source code, and the launch files
 * `jackal_description` contains the modified jackal robot model descriptions
+* 'mpc_ros-noetic' the pkg to use mpc to tracking the path
 
 **Note:** If you are working on this project, it is encouraged to fork this repository and work on your own fork!
 
@@ -55,8 +55,8 @@ After forking this repo to your own github:
 ```bash
 # Clone your own fork of this repo (assuming home here `~/`)
 cd
-git clone https://github.com/<YOUR_GITHUB_USERNAME>/ME5413_Planning_Project.git
-cd ME5413_Planning_Project
+git clone https://github.com/<YOUR_GITHUB_USERNAME>/ME5413.git
+cd ME5413
 
 # Install all dependencies
 rosdep install --from-paths src --ignore-src -r -y
@@ -69,25 +69,14 @@ source devel/setup.bash
 
 ## Usage
 
-### 0. Gazebo World
+### 0. Gazebo World & Path trakcing
 
-This command will launch the gazebo with the project world
+This command will launch the gazebo with the project world and start the path tracking.
 
 ```bash
 # Launch Gazebo World together with our robot
-roslaunch me5413_world world.launch
+roslaunch mpc_ros trytry.launch
 ```
-
-### 1. Path Tracking
-
-In the second terminal, launch the path publisher node and the path tracker node:
-
-```bash
-# Load a map and launch AMCL localizer
-roslaunch me5413_world path_tracking.launch
-```
-
-![rviz_tracking_image](src/me5413_world/media/rviz_tracking.png)
 
 ## Student Tasks
 
