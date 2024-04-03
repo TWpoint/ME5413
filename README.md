@@ -37,6 +37,8 @@ NUS ME5413 Autonomous Mobile Robotics Planning Project
   * `jackal_navigation`
   * `velodyne_simulator`
   * `dynamic_reconfigure`
+* Add on ros pkg:
+  * ![mpc_ros](https://github.com/Geonhee-LEE/mpc_ros)
 
 ## Installation
 
