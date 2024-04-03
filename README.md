@@ -7,6 +7,7 @@ NUS ME5413 Autonomous Mobile Robotics Planning Project
 ![ROS Noetic](https://img.shields.io/badge/Tools-ROS_Noetic-informational?style=flat&logo=ROS&logoColor=white&color=2bbc8a)
 ![C++](https://img.shields.io/badge/Code-C++-informational?style=flat&logo=c%2B%2B&logoColor=white&color=2bbc8a)
 ![Python](https://img.shields.io/badge/Code-Python-informational?style=flat&logo=Python&logoColor=white&color=2bbc8a)
+![mpc_ros](https://github.com/Geonhee-LEE/mpc_ros)
 ![GitHub Repo stars](https://img.shields.io/github/stars/NUS-Advanced-Robotics-Centre/ME5413_Planning_Project?color=FFE333)
 ![GitHub Repo forks](https://img.shields.io/github/forks/NUS-Advanced-Robotics-Centre/ME5413_Planning_Project?color=FFE333)
 
@@ -38,7 +39,7 @@ NUS ME5413 Autonomous Mobile Robotics Planning Project
   * `velodyne_simulator`
   * `dynamic_reconfigure`
 * Add on ros pkg:
-  * ![mpc_ros](https://github.com/Geonhee-LEE/mpc_ros)
+  * mpc_ros by Geonhee-LEE
 
 ## Installation
 
